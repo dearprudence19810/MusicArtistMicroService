@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\johnf\\Development\\MusicArtistMicroService\\MusicArtistMicroService\\MusicArtistMicroService.csproj": {}
+    "C:\\Users\\johnf\\Development\\git\\MusicArtistMicroService\\MusicArtistMicroService\\MusicArtistMicroService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\johnf\\Development\\MusicArtistMicroService\\MusicArtistMicroService\\MusicArtistMicroService.csproj": {
+    "C:\\Users\\johnf\\Development\\git\\MusicArtistMicroService\\MusicArtistMicroService\\MusicArtistMicroService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\johnf\\Development\\MusicArtistMicroService\\MusicArtistMicroService\\MusicArtistMicroService.csproj",
+        "projectUniqueName": "C:\\Users\\johnf\\Development\\git\\MusicArtistMicroService\\MusicArtistMicroService\\MusicArtistMicroService.csproj",
         "projectName": "MusicArtistMicroService",
-        "projectPath": "C:\\Users\\johnf\\Development\\MusicArtistMicroService\\MusicArtistMicroService\\MusicArtistMicroService.csproj",
+        "projectPath": "C:\\Users\\johnf\\Development\\git\\MusicArtistMicroService\\MusicArtistMicroService\\MusicArtistMicroService.csproj",
         "packagesPath": "C:\\Users\\johnf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\johnf\\Development\\MusicArtistMicroService\\MusicArtistMicroService\\obj\\",
+        "outputPath": "C:\\Users\\johnf\\Development\\git\\MusicArtistMicroService\\MusicArtistMicroService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\johnf\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -42,6 +42,16 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.1, )"
             }
           },
           "imports": [

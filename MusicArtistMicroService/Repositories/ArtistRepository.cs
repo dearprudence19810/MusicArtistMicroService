@@ -3,11 +3,19 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MusicArtistMicroService.DBContexts;
 
 namespace MusicArtistMicroService.Repositories
 {
     public class ArtistRepository : IArtistRepository
     {
+        private readonly ArtistContext artistContext;
+
+        public ArtistRepository( ArtistContext artistContext )
+        {
+            this.artistContext = artistContext;
+        }
+
         public void DeleteArtist(int Id)
         {
             throw new NotImplementedException();
@@ -15,7 +23,8 @@ namespace MusicArtistMicroService.Repositories
 
         public Artist GetArtistById(int Id)
         {
-            throw new NotImplementedException();
+            Artist artist = artistContext.Artists.Find( 1 );
+            return artist;
         }
 
         public IEnumerable<Artist> GetArtists()

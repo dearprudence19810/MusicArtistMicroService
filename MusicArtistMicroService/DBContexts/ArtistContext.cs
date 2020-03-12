@@ -7,8 +7,14 @@ using System.Threading.Tasks;
 
 namespace MusicArtistMicroService.DBContexts
 {
+
     public class ArtistContext : DbContext
     {
+        public ArtistContext( DbContextOptions<ArtistContext> options ) : base(options)
+        {
+
+        }
+
         public DbSet<Artist> Artists { get; set; }
 
         protected override void OnModelCreating( ModelBuilder modelBuilder )

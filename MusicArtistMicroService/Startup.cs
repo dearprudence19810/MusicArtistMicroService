@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using MusicArtistMicroService.DBContexts;
+using MusicArtistMicroService.Repositories;
 
 namespace MusicArtistMicroService
 {
@@ -26,7 +27,12 @@ namespace MusicArtistMicroService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContextPool<ArtistContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ArtistsDBConnection")));
+            // services.AddDbContextPool<ArtistContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ArtistsDBConnection")));
+            // services.AddScoped<IArtistRepository, ArtistRepository>();
+
+            services.AddDbContext<ArtistContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ArtistsDBConnection")), ServiceLifetime.Singleton);
+            services.AddSingleton<IArtistRepository, ArtistRepository>();
+            
             services.AddControllers();
         }
 
